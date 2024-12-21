@@ -95,7 +95,7 @@ UIScale_2.Scale = 0.760
 
 -- Scripts:
 
-local function CRYVPG_fake_script() -- RejoinServer.RJ 
+local function PRJR_fake_script() -- RejoinServer.RJ 
 	local script = Instance.new('LocalScript', RejoinServer)
 
 	local Players = game:GetService("Players")
@@ -110,8 +110,8 @@ local function CRYVPG_fake_script() -- RejoinServer.RJ
 	
 	
 end
-coroutine.wrap(CRYVPG_fake_script)()
-local function YYWS_fake_script() -- AutoCollectAllItem.AutoCollectAllItemScript 
+coroutine.wrap(PRJR_fake_script)()
+local function VRZG_fake_script() -- AutoCollectAllItem.AutoCollectAllItemScript 
 	local script = Instance.new('LocalScript', AutoCollectAllItem)
 
 	local TweenService = game:GetService("TweenService")
@@ -122,73 +122,58 @@ local function YYWS_fake_script() -- AutoCollectAllItem.AutoCollectAllItemScript
 	
 	local button = script.Parent
 	
-	local function moveToPosition(position, duration)
-	    local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear)
-	    local tween = TweenService:Create(humanoidRootPart, tweenInfo, {CFrame = CFrame.new(position)})
-	    tween:Play()
-	    tween.Completed:Wait()
-	end
-	
 	local function teleportToPositions(positions)
-	    for _, position in positions do
-	        humanoidRootPart.CFrame = CFrame.new(position)
-	        task.wait(0.5)
-	    end
+		for _, position in positions do
+			humanoidRootPart.CFrame = CFrame.new(position)
+			task.wait(0.5)
+		end
 	end
 	
 	button.MouseButton1Click:Connect(function()
-	    game.StarterGui:SetCore("SendNotification", {
-	        Title = "Notification",
-	        Text = "Waiting 2 seconds",
-	        Duration = 3
-	    })
-	    task.wait(3)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Notification",
+			Text = "Waiting 2 seconds",
+			Duration = 3
+		})
+		task.wait(3)
 	
-	    moveToPosition(Vector3.new(274, 348, 473), 10)
-	    task.wait(0)
-	    moveToPosition(Vector3.new(268, 348, 473), 10)
-	    task.wait(0)
-	    moveToPosition(Vector3.new(166, 780, 122), 10)
-	    task.wait(0)
-	    moveToPosition(Vector3.new(165, 760, -1015), 10)
+		local teleportPositions = {
+			Vector3.new(274, 348, 473),
+			Vector3.new(268, 348, 473),
+			Vector3.new(166, 780, 122),
+			Vector3.new(165, 760, -1015),
+			Vector3.new(131, 760, -975),
+			Vector3.new(131, 760, -984),
+			Vector3.new(131, 760, -991),
+			Vector3.new(131, 760, -1000),
+			Vector3.new(131, 760, -1008),
+			Vector3.new(131, 760, -1015),
+			Vector3.new(131, 760, -1024),
+			Vector3.new(131, 760, -1031),
+			Vector3.new(131, 760, -1040),
+			Vector3.new(131, 760, -1047),
+			Vector3.new(131, 760, -1055),
+			Vector3.new(198, 760, -1055),
+			Vector3.new(198, 760, -1048),
+			Vector3.new(198, 760, -1040),
+			Vector3.new(198, 760, -1031),
+			Vector3.new(198, 760, -1023),
+			Vector3.new(198, 760, -1015),
+			Vector3.new(198, 760, -1008),
+			Vector3.new(198, 760, -999),
+			Vector3.new(198, 760, -991),
+			Vector3.new(198, 760, -983),
+			Vector3.new(198, 760, -976),
+			Vector3.new(105, 3, 81),
+			Vector3.new(84, 5, 34)
+		}
 	
-	    local teleportPositions = {
-	        Vector3.new(131, 760, -975),
-	        Vector3.new(131, 760, -984),
-	        Vector3.new(131, 760, -991),
-	        Vector3.new(131, 760, -1000),
-	        Vector3.new(131, 760, -1008),
-	        Vector3.new(131, 760, -1015),
-	        Vector3.new(131, 760, -1024),
-	        Vector3.new(131, 760, -1031),
-	        Vector3.new(131, 760, -1040),
-	        Vector3.new(131, 760, -1047),
-	        Vector3.new(131, 760, -1055),
-	        Vector3.new(198, 760, -1055),
-	        Vector3.new(198, 760, -1048),
-	        Vector3.new(198, 760, -1040),
-	        Vector3.new(198, 760, -1031),
-	        Vector3.new(198, 760, -1023),
-	        Vector3.new(198, 760, -1015),
-	        Vector3.new(198, 760, -1008),
-	        Vector3.new(198, 760, -999),
-	        Vector3.new(198, 760, -991),
-	        Vector3.new(198, 760, -983),
-	        Vector3.new(198, 760, -976)
-	    }
-	    teleportToPositions(teleportPositions)
-	
-	    task.wait(2)
-	
-	    moveToPosition(Vector3.new(105, 3, 81), 10)
-	    humanoidRootPart.CFrame = CFrame.new(84, 5, 34)
+		teleportToPositions(teleportPositions)
 	end)
 	
-	
-	
 end
-coroutine.wrap(YYWS_fake_script)()
-local function TELOFX_fake_script() -- U5.Drag_UI 
+coroutine.wrap(VRZG_fake_script)()
+local function KCJEV_fake_script() -- U5.Drag_UI 
 	local script = Instance.new('LocalScript', U5)
 
 	local userInputService = game:GetService("UserInputService")
@@ -231,8 +216,8 @@ local function TELOFX_fake_script() -- U5.Drag_UI
 	end)
 	
 end
-coroutine.wrap(TELOFX_fake_script)()
-local function MBFGJ_fake_script() -- Btn.Open/Close 
+coroutine.wrap(KCJEV_fake_script)()
+local function AMDOYO_fake_script() -- Btn.Open/Close 
 	local script = Instance.new('LocalScript', Btn)
 
 	local button = script.Parent
@@ -247,8 +232,8 @@ local function MBFGJ_fake_script() -- Btn.Open/Close
 	end
 	
 end
-coroutine.wrap(MBFGJ_fake_script)()
-local function IEVCX_fake_script() -- Btn.Drag_BTN 
+coroutine.wrap(AMDOYO_fake_script)()
+local function NIGWB_fake_script() -- Btn.Drag_BTN 
 	local script = Instance.new('LocalScript', Btn)
 
 	local userInputService = game:GetService("UserInputService")
@@ -291,4 +276,4 @@ local function IEVCX_fake_script() -- Btn.Drag_BTN
 	end)
 	
 end
-coroutine.wrap(IEVCX_fake_script)()
+coroutine.wrap(NIGWB_fake_script)()
